@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== SEO ===== -->
+  <title>About | Ryan Kim</title>
+  <meta name="description" content="About Ryan Kim — education at Northeastern University (Computer Science + Business), past accomplishments, and skills.">
+  <meta name="author" content="Ryan Kim">
+  <meta property="og:title" content="About Ryan Kim">
+  <meta property="og:description" content="Education, accomplishments, and skills.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='28' fill='white'%3ERK%3C/text%3E%3C/svg%3E">
+
+  <!-- Applies a saved light/dark choice before the page is drawn -->
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      var savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') document.documentElement.setAttribute('data-theme', savedTheme);
+    } catch (e) {}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="nav-logo" href="index.html" aria-label="Ryan Kim, home">
+        <span class="logo-mark" aria-hidden="true">RK</span>
+        <span class="logo-text">Ryan Kim</span>
+      </a>
+
+      <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== PAGE HEADER ===================== -->
+    <section class="page-hero">
+      <div class="container reveal">
+        <p class="eyebrow">About</p>
+        <h1>About Me</h1>
+        <p class="page-sub">My background, education, and the milestones that got me here.</p>
+      </div>
+    </section>
+
+    <!-- ===================== BIO + QUICK FACTS ===================== -->
+    <section class="section section-tight" aria-labelledby="bio-heading">
+      <div class="container bio-grid">
+        <div class="bio-text reveal">
+          <h2 id="bio-heading">Who I Am</h2>
+          <p>[[SHORT BIO: Three or four sentences introducing yourself — what got you into technology, why you chose to combine Computer Science with Business, what you enjoy building, and what you're hoping to do next. Keep it friendly and specific.]]</p>
+        </div>
+
+        <aside class="card facts-card reveal" aria-label="Quick facts">
+          <dl class="facts">
+            <div>
+              <dt>School</dt>
+              <dd>Northeastern University</dd>
+            </div>
+            <div>
+              <dt>Studying</dt>
+              <dd>Computer Science + Business</dd>
+            </div>
+            <div>
+              <dt>Based in</dt>
+              <dd>[[CITY, STATE]]</dd>
+            </div>
+            <div>
+              <dt>Interests</dt>
+              <dd>[[INTERESTS: e.g. 2–3 topics]]</dd>
+            </div>
+          </dl>
+          <!-- Add your resume as assets/resume.pdf and this button will work -->
+          <a class="btn btn-primary" href="assets/resume.pdf" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+            Download Resume
+          </a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section class="section section-alt" aria-labelledby="edu-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Education</p>
+          <h2 id="edu-heading">Where I'm Learning</h2>
+        </div>
+
+        <article class="card edu-card reveal">
+          <span class="goal-icon" aria-hidden="true">🎓</span>
+          <div>
+            <h3>Northeastern University</h3>
+            <p class="edu-degree">Computer Science + Business</p>
+            <p class="edu-meta">[[EXPECTED GRADUATION: e.g. Expected May 2029]]</p>
+            <p class="edu-detail"><strong>Relevant coursework:</strong> [[RELEVANT COURSEWORK: three to five course names, separated by commas]]</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== TIMELINE OF ACCOMPLISHMENTS =====================
+         Newest at the top. To add one, copy a whole <li> ... </li> block. -->
+    <section class="section" aria-labelledby="timeline-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Milestones</p>
+          <h2 id="timeline-heading">Past Accomplishments</h2>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="card timeline-content">
+              <p class="timeline-date">[[ACCOMPLISHMENT 1: DATE]]</p>
+              <h3>[[ACCOMPLISHMENT 1: TITLE]]</h3>
+              <p>[[ACCOMPLISHMENT 1: DESCRIPTION — one or two sentences on what you did, the tools you used, and the result.]]</p>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="card timeline-content">
+              <p class="timeline-date">[[ACCOMPLISHMENT 2: DATE]]</p>
+              <h3>[[ACCOMPLISHMENT 2: TITLE]]</h3>
+              <p>[[ACCOMPLISHMENT 2: DESCRIPTION — one or two sentences on what you did, the tools you used, and the result.]]</p>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="card timeline-content">
+              <p class="timeline-date">[[ACCOMPLISHMENT 3: DATE]]</p>
+              <h3>[[ACCOMPLISHMENT 3: TITLE]]</h3>
+              <p>[[ACCOMPLISHMENT 3: DESCRIPTION — one or two sentences on what you did, the tools you used, and the result.]]</p>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="card timeline-content">
+              <p class="timeline-date">[[ACCOMPLISHMENT 4: DATE]]</p>
+              <h3>[[ACCOMPLISHMENT 4: TITLE]]</h3>
+              <p>[[ACCOMPLISHMENT 4: DESCRIPTION — one or two sentences on what you did, the tools you used, and the result.]]</p>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="card timeline-content">
+              <p class="timeline-date">[[ACCOMPLISHMENT 5: DATE]]</p>
+              <h3>[[ACCOMPLISHMENT 5: TITLE]]</h3>
+              <p>[[ACCOMPLISHMENT 5: DESCRIPTION — one or two sentences on what you did, the tools you used, and the result.]]</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS BY CATEGORY ===================== -->
+    <section class="section section-alt" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Skills</p>
+          <h2 id="skills-heading">What I Work With</h2>
+        </div>
+
+        <div class="card-grid skills-grid">
+          <article class="card card-hover skill-card reveal">
+            <h3><span aria-hidden="true">💻</span> Languages</h3>
+            <ul class="chip-list">
+              <li class="chip">Java</li>
+              <li class="chip">Python</li>
+              <li class="chip">C++</li>
+              <li class="chip">Kotlin</li>
+              <li class="chip">JavaScript</li>
+              <li class="chip">HTML</li>
+            </ul>
+          </article>
+
+          <article class="card card-hover skill-card reveal">
+            <h3><span aria-hidden="true">🎨</span> Design</h3>
+            <ul class="chip-list">
+              <li class="chip">Figma</li>
+              <li class="chip">Photoshop</li>
+            </ul>
+          </article>
+
+          <article class="card card-hover skill-card reveal">
+            <h3><span aria-hidden="true">🎮</span> Game Dev</h3>
+            <ul class="chip-list">
+              <li class="chip">Unity 3D</li>
+            </ul>
+          </article>
+
+          <article class="card card-hover skill-card reveal">
+            <h3><span aria-hidden="true">🧠</span> Machine Learning</h3>
+            <ul class="chip-list">
+              <li class="chip">TensorFlow</li>
+              <li class="chip">Keras</li>
+              <li class="chip">Python</li>
+            </ul>
+          </article>
+
+          <article class="card card-hover skill-card reveal">
+            <h3><span aria-hidden="true">🛠️</span> Dev Tools</h3>
+            <ul class="chip-list">
+              <li class="chip">GitHub</li>
+              <li class="chip">Visual Studio Code</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">&copy; <span id="year">2026</span> Ryan Kim. Built with HTML, CSS &amp; JavaScript.</p>
+      <ul class="footer-links">
+        <li>
+          <a href="https://github.com/Unknownboykim" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            GitHub<span class="sr-only"> (opens in a new tab)</span>
+          </a>
+        </li>
+        <li>
+          <a href="[[LINKEDIN URL]]" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            LinkedIn<span class="sr-only"> (opens in a new tab)</span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:[[EMAIL ADDRESS]]">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            Email
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

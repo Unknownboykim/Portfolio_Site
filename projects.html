@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== SEO ===== -->
+  <title>Projects | Ryan Kim</title>
+  <meta name="description" content="Projects by Ryan Kim — web, mobile, machine learning, and game development work with links to GitHub.">
+  <meta name="author" content="Ryan Kim">
+  <meta property="og:title" content="Projects by Ryan Kim">
+  <meta property="og:description" content="Web, mobile, machine learning, and game development projects.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='28' fill='white'%3ERK%3C/text%3E%3C/svg%3E">
+
+  <!-- Applies a saved light/dark choice before the page is drawn -->
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      var savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') document.documentElement.setAttribute('data-theme', savedTheme);
+    } catch (e) {}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="nav-logo" href="index.html" aria-label="Ryan Kim, home">
+        <span class="logo-mark" aria-hidden="true">RK</span>
+        <span class="logo-text">Ryan Kim</span>
+      </a>
+
+      <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+        </ul>
+
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== PAGE HEADER ===================== -->
+    <section class="page-hero">
+      <div class="container reveal">
+        <p class="eyebrow">Portfolio</p>
+        <h1>Projects</h1>
+        <p class="page-sub">A selection of things I've built. Use the filters to browse by category.</p>
+      </div>
+    </section>
+
+    <section class="section section-tight" aria-label="Project list">
+      <div class="container">
+
+        <!-- ===================== FILTER BUTTONS =====================
+             data-filter must match a word used in a card's data-category. -->
+        <div class="filter-bar reveal" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" type="button" data-filter="web" aria-pressed="false">Web</button>
+          <button class="filter-btn" type="button" data-filter="mobile" aria-pressed="false">Mobile</button>
+          <button class="filter-btn" type="button" data-filter="ml" aria-pressed="false">Machine Learning</button>
+          <button class="filter-btn" type="button" data-filter="gamedev" aria-pressed="false">Game Dev</button>
+        </div>
+        <p class="filter-status" id="filter-status" aria-live="polite"></p>
+
+        <!-- ===================== PROJECT CARDS =====================
+             HOW TO EDIT A CARD
+             • data-category: one or more of  web  mobile  ml  gamedev  (separate with spaces, e.g. "web ml")
+             • Screenshot: save it as assets/images/project-N.png (until then a gray "coming soon" box shows)
+             • Tags: add/remove <li class="tag"> lines
+             • Live Demo: replace "#" with a real link, or delete that line -->
+        <div class="project-grid" id="project-grid">
+
+          <!-- PROJECT 1 -->
+          <article class="card project-card reveal" data-category="web">
+            <div class="project-media">
+              <img src="assets/images/project-1.png" alt="Screenshot of [[PROJECT 1 TITLE]]" width="800" height="500" loading="lazy" onerror="this.parentElement.classList.add('is-missing')">
+              <div class="media-fallback">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></svg>
+                <span>Screenshot coming soon</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-category">Web</p>
+              <h3 class="project-title">[[PROJECT 1 TITLE]]</h3>
+              <p class="project-desc">[[PROJECT 1 DESCRIPTION: Two sentences on what the project does, who it's for, and what you learned building it.]]</p>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li class="tag">HTML</li>
+                <li class="tag">JavaScript</li>
+              </ul>
+              <div class="project-links">
+                <a class="btn btn-primary btn-sm" href="https://github.com/Unknownboykim/[[PROJECT 1 REPO NAME]]" target="_blank" rel="noopener noreferrer">View on GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+                <a class="btn btn-ghost btn-sm" href="#">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2 -->
+          <article class="card project-card reveal" data-category="mobile">
+            <div class="project-media">
+              <img src="assets/images/project-2.png" alt="Screenshot of [[PROJECT 2 TITLE]]" width="800" height="500" loading="lazy" onerror="this.parentElement.classList.add('is-missing')">
+              <div class="media-fallback">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></svg>
+                <span>Screenshot coming soon</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-category">Mobile</p>
+              <h3 class="project-title">[[PROJECT 2 TITLE]]</h3>
+              <p class="project-desc">[[PROJECT 2 DESCRIPTION: Two sentences on what the project does, who it's for, and what you learned building it.]]</p>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li class="tag">Kotlin</li>
+                <li class="tag">Figma</li>
+              </ul>
+              <div class="project-links">
+                <a class="btn btn-primary btn-sm" href="https://github.com/Unknownboykim/[[PROJECT 2 REPO NAME]]" target="_blank" rel="noopener noreferrer">View on GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+                <a class="btn btn-ghost btn-sm" href="#">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3 -->
+          <article class="card project-card reveal" data-category="ml">
+            <div class="project-media">
+              <img src="assets/images/project-3.png" alt="Screenshot of [[PROJECT 3 TITLE]]" width="800" height="500" loading="lazy" onerror="this.parentElement.classList.add('is-missing')">
+              <div class="media-fallback">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></svg>
+                <span>Screenshot coming soon</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-category">Machine Learning</p>
+              <h3 class="project-title">[[PROJECT 3 TITLE]]</h3>
+              <p class="project-desc">[[PROJECT 3 DESCRIPTION: Two sentences on what the project does, who it's for, and what you learned building it.]]</p>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li class="tag">Python</li>
+                <li class="tag">TensorFlow</li>
+                <li class="tag">Keras</li>
+              </ul>
+              <div class="project-links">
+                <a class="btn btn-primary btn-sm" href="https://github.com/Unknownboykim/[[PROJECT 3 REPO NAME]]" target="_blank" rel="noopener noreferrer">View on GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+                <a class="btn btn-ghost btn-sm" href="#">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 4 -->
+          <article class="card project-card reveal" data-category="gamedev">
+            <div class="project-media">
+              <img src="assets/images/project-4.png" alt="Screenshot of [[PROJECT 4 TITLE]]" width="800" height="500" loading="lazy" onerror="this.parentElement.classList.add('is-missing')">
+              <div class="media-fallback">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></svg>
+                <span>Screenshot coming soon</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-category">Game Dev</p>
+              <h3 class="project-title">[[PROJECT 4 TITLE]]</h3>
+              <p class="project-desc">[[PROJECT 4 DESCRIPTION: Two sentences on what the project does, who it's for, and what you learned building it.]]</p>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li class="tag">Unity 3D</li>
+                <li class="tag">Photoshop</li>
+              </ul>
+              <div class="project-links">
+                <a class="btn btn-primary btn-sm" href="https://github.com/Unknownboykim/[[PROJECT 4 REPO NAME]]" target="_blank" rel="noopener noreferrer">View on GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+                <a class="btn btn-ghost btn-sm" href="#">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 5 -->
+          <article class="card project-card reveal" data-category="web">
+            <div class="project-media">
+              <img src="assets/images/project-5.png" alt="Screenshot of [[PROJECT 5 TITLE]]" width="800" height="500" loading="lazy" onerror="this.parentElement.classList.add('is-missing')">
+              <div class="media-fallback">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></svg>
+                <span>Screenshot coming soon</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-category">Web</p>
+              <h3 class="project-title">[[PROJECT 5 TITLE]]</h3>
+              <p class="project-desc">[[PROJECT 5 DESCRIPTION: Two sentences on what the project does, who it's for, and what you learned building it.]]</p>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li class="tag">Java</li>
+                <li class="tag">HTML</li>
+              </ul>
+              <div class="project-links">
+                <a class="btn btn-primary btn-sm" href="https://github.com/Unknownboykim/[[PROJECT 5 REPO NAME]]" target="_blank" rel="noopener noreferrer">View on GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+                <a class="btn btn-ghost btn-sm" href="#">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 6 -->
+          <article class="card project-card reveal" data-category="ml">
+            <div class="project-media">
+              <img src="assets/images/project-6.png" alt="Screenshot of [[PROJECT 6 TITLE]]" width="800" height="500" loading="lazy" onerror="this.parentElement.classList.add('is-missing')">
+              <div class="media-fallback">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></svg>
+                <span>Screenshot coming soon</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-category">Machine Learning</p>
+              <h3 class="project-title">[[PROJECT 6 TITLE]]</h3>
+              <p class="project-desc">[[PROJECT 6 DESCRIPTION: Two sentences on what the project does, who it's for, and what you learned building it.]]</p>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li class="tag">Python</li>
+                <li class="tag">C++</li>
+              </ul>
+              <div class="project-links">
+                <a class="btn btn-primary btn-sm" href="https://github.com/Unknownboykim/[[PROJECT 6 REPO NAME]]" target="_blank" rel="noopener noreferrer">View on GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+                <a class="btn btn-ghost btn-sm" href="#">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Shown by JavaScript only when a filter matches no projects -->
+        <p class="empty-state" id="empty-state" hidden>No projects in this category yet — check back soon!</p>
+
+        <!-- More-on-GitHub banner -->
+        <div class="cta-card cta-compact reveal">
+          <h2>Want to see more?</h2>
+          <p>All of my code, experiments, and works-in-progress live on GitHub.</p>
+          <div class="btn-row center">
+            <a class="btn btn-primary" href="https://github.com/Unknownboykim" target="_blank" rel="noopener noreferrer">Visit My GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">&copy; <span id="year">2026</span> Ryan Kim. Built with HTML, CSS &amp; JavaScript.</p>
+      <ul class="footer-links">
+        <li>
+          <a href="https://github.com/Unknownboykim" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            GitHub<span class="sr-only"> (opens in a new tab)</span>
+          </a>
+        </li>
+        <li>
+          <a href="[[LINKEDIN URL]]" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            LinkedIn<span class="sr-only"> (opens in a new tab)</span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:[[EMAIL ADDRESS]]">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            Email
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

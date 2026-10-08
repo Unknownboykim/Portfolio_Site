@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== SEO ===== -->
+  <title>Page Not Found | Ryan Kim</title>
+  <meta name="description" content="The page you were looking for could not be found.">
+  <meta name="robots" content="noindex">
+
+  <!-- GitHub Pages shows this file for ANY missing address, even deep ones like
+       yoursite.github.io/some/old/page. This makes the CSS, JS and links below
+       load from the site's root in that case. It is skipped when you open the
+       file straight from your computer, so local previews still work. -->
+  <script>
+    if (location.protocol !== 'file:') {
+      var base = document.createElement('base');
+      base.href = '/';
+      document.head.appendChild(base);
+    }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='28' fill='white'%3ERK%3C/text%3E%3C/svg%3E">
+
+  <!-- Applies a saved light/dark choice before the page is drawn -->
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      var savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') document.documentElement.setAttribute('data-theme', savedTheme);
+    } catch (e) {}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="nav-logo" href="index.html" aria-label="Ryan Kim, home">
+        <span class="logo-mark" aria-hidden="true">RK</span>
+        <span class="logo-text">Ryan Kim</span>
+      </a>
+
+      <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===================== 404 MESSAGE ===================== -->
+  <main id="main" class="notfound">
+    <div class="container notfound-inner reveal">
+      <p class="notfound-code" aria-hidden="true">404</p>
+      <h1>Page not found</h1>
+      <p>The page you're looking for doesn't exist or may have moved. Let's get you back on track.</p>
+      <div class="btn-row center">
+        <a class="btn btn-primary" href="index.html">Back to Home</a>
+        <a class="btn btn-secondary" href="projects.html">View Projects</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">&copy; <span id="year">2026</span> Ryan Kim. Built with HTML, CSS &amp; JavaScript.</p>
+      <ul class="footer-links">
+        <li>
+          <a href="https://github.com/Unknownboykim" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            GitHub<span class="sr-only"> (opens in a new tab)</span>
+          </a>
+        </li>
+        <li>
+          <a href="[[LINKEDIN URL]]" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            LinkedIn<span class="sr-only"> (opens in a new tab)</span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:[[EMAIL ADDRESS]]">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            Email
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
