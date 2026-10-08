@@ -6,10 +6,10 @@
 
   <!-- ===== SEO ===== -->
   <title>Projects | Ryan Kim</title>
-  <meta name="description" content="Projects by Ryan Kim — web, mobile, machine learning, and game development work with links to GitHub.">
+  <meta name="description" content="Projects by Ryan Kim — web, mobile, machine learning, game development, and robotics work with links to GitHub.">
   <meta name="author" content="Ryan Kim">
   <meta property="og:title" content="Projects by Ryan Kim">
-  <meta property="og:description" content="Web, mobile, machine learning, and game development projects.">
+  <meta property="og:description" content="Web, mobile, machine learning, game development, and robotics projects.">
   <meta property="og:type" content="website">
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='28' fill='white'%3ERK%3C/text%3E%3C/svg%3E">
@@ -82,37 +82,40 @@
           <button class="filter-btn" type="button" data-filter="mobile" aria-pressed="false">Mobile</button>
           <button class="filter-btn" type="button" data-filter="ml" aria-pressed="false">Machine Learning</button>
           <button class="filter-btn" type="button" data-filter="gamedev" aria-pressed="false">Game Dev</button>
+          <button class="filter-btn" type="button" data-filter="robotics" aria-pressed="false">Robotics</button>
         </div>
         <p class="filter-status" id="filter-status" aria-live="polite"></p>
 
         <!-- ===================== PROJECT CARDS =====================
              HOW TO EDIT A CARD
-             • data-category: one or more of  web  mobile  ml  gamedev  (separate with spaces, e.g. "web ml")
+             • data-category: one or more of  web  mobile  ml  gamedev  robotics  (separate with spaces, e.g. "web ml")
              • Screenshot: save it as assets/images/project-N.png (until then a gray "coming soon" box shows)
              • Tags: add/remove <li class="tag"> lines
              • Live Demo: replace "#" with a real link, or delete that line -->
         <div class="project-grid" id="project-grid">
 
           <!-- PROJECT 1 -->
-          <article class="card project-card reveal" data-category="web">
+          <article class="card project-card reveal" data-category="robotics">
             <div class="project-media">
-              <img src="assets/images/project-1.png" alt="Screenshot of [[PROJECT 1 TITLE]]" width="800" height="500" loading="lazy" onerror="this.parentElement.classList.add('is-missing')">
+              <img src="assets/images/project-1.png" alt="Screenshot of the PiCar-X Lego Turret robot" width="800" height="500" loading="lazy" onerror="this.parentElement.classList.add('is-missing')">
               <div class="media-fallback">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></svg>
                 <span>Screenshot coming soon</span>
               </div>
             </div>
             <div class="project-body">
-              <p class="project-category">Web</p>
-              <h3 class="project-title">[[PROJECT 1 TITLE]]</h3>
-              <p class="project-desc">[[PROJECT 1 DESCRIPTION: Two sentences on what the project does, who it's for, and what you learned building it.]]</p>
+              <p class="project-category">Robotics</p>
+              <h3 class="project-title">PiCar-X Lego Turret</h3>
+              <p class="project-desc">A Raspberry Pi PiCar-X robot car rebuilt with Lego armor, a joystick-controlled servo turret, and a button-triggered Lego missile launcher, all still drivable from the mobile app. I wired the joystick straight into the Robot HAT's built-in ADC and merged app control and turret control into a single Python loop.</p>
               <ul class="tag-list" aria-label="Technologies used">
-                <li class="tag">HTML</li>
-                <li class="tag">JavaScript</li>
+                <li class="tag">Python</li>
+                <li class="tag">Raspberry Pi</li>
+                <li class="tag">Servos</li>
+                <li class="tag">Lego</li>
               </ul>
               <div class="project-links">
-                <a class="btn btn-primary btn-sm" href="https://github.com/Unknownboykim/[[PROJECT 1 REPO NAME]]" target="_blank" rel="noopener noreferrer">View on GitHub<span class="sr-only"> (opens in a new tab)</span></a>
-                <a class="btn btn-ghost btn-sm" href="#">Live Demo</a>
+                <a class="btn btn-primary btn-sm" href="https://github.com/Unknownboykim/picarx-lego-turret" target="_blank" rel="noopener noreferrer">View on GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+                <a class="btn btn-ghost btn-sm" href="https://www.youtube.com/watch?v=pMx2uCLGDFA" target="_blank" rel="noopener noreferrer">Watch Demo<span class="sr-only"> (opens in a new tab)</span></a>
               </div>
             </div>
           </article>
