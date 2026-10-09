@@ -883,6 +883,17 @@ a:hover { color: var(--color-accent-hover); }
   color: var(--color-text-muted);
 }
 
+/* Clubs */
+.clubs-grid { grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); }
+.club-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+.club-card .goal-icon { margin-bottom: 0; }
+.club-card h3 { margin-bottom: 0.15rem; font-size: 1rem; }
+.club-card p { font-size: 0.875rem; color: var(--color-text-muted); }
+
 /* Skills */
 .skills-grid { grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); }
 .skill-card h3 {
