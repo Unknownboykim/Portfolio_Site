@@ -712,8 +712,39 @@ a:hover { color: var(--color-accent-hover); }
 
 .stack {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-7);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-7) var(--space-8);
+}
+
+/* Chips with a logo */
+.chip--icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 0.7rem;
+}
+.chip-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+.chip-icon--line { color: var(--color-accent); }
+.chip-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  font-size: 0.5625rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+/* Black logos (GitHub, Unity) turn white in dark mode */
+:root[data-theme="dark"] .chip-icon--mono { filter: invert(1); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .chip-icon--mono { filter: invert(1); }
 }
 .stack-label {
   margin-bottom: var(--space-3);
