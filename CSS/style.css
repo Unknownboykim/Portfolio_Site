@@ -951,6 +951,25 @@ a:hover { color: var(--color-accent-hover); }
 .project-media.is-missing img { display: none; }
 .project-media.is-missing .media-fallback { display: flex; }
 
+/* Thumbnails that should never be cropped (e.g. text in the image) */
+.project-media--fit { background: #0b1120; }
+.project-media--fit img { object-fit: contain; }
+
+/* Logo images: show the whole logo on white instead of cropping it */
+.project-media--logo { background: #ffffff; }
+.project-media--logo img {
+  object-fit: contain;
+  padding: var(--space-6);
+}
+.project-card:hover .project-media--logo img { transform: scale(1.02); }
+
+.project-meta {
+  margin-bottom: var(--space-3);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
 .project-body {
   display: flex;
   flex: 1;
