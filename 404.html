@@ -5,21 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ===== SEO ===== -->
-  <title>Page Not Found | Ryan Kim</title>
-  <meta name="description" content="The page you were looking for could not be found.">
-  <meta name="robots" content="noindex">
-
-  <!-- GitHub Pages shows this file for ANY missing address, even deep ones like
-       yoursite.github.io/some/old/page. This makes the CSS, JS and links below
-       load from the site's root in that case. It is skipped when you open the
-       file straight from your computer, so local previews still work. -->
-  <script>
-    if (location.protocol !== 'file:') {
-      var base = document.createElement('base');
-      base.href = '/';
-      document.head.appendChild(base);
-    }
-  </script>
+  <title>About | Ryan Kim</title>
+  <meta name="description" content="About Ryan Kim — education at Northeastern University (Computer Science + Business), past accomplishments, and skills.">
+  <meta name="author" content="Ryan Kim">
+  <meta property="og:title" content="About Ryan Kim">
+  <meta property="og:description" content="Education, accomplishments, and skills.">
+  <meta property="og:type" content="website">
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='28' fill='white'%3ERK%3C/text%3E%3C/svg%3E">
 
@@ -53,7 +44,7 @@
       <div class="nav-right">
         <ul class="nav-links" id="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
           <li><a href="projects.html">Projects</a></li>
         </ul>
 
@@ -69,17 +60,213 @@
     </nav>
   </header>
 
-  <!-- ===================== 404 MESSAGE ===================== -->
-  <main id="main" class="notfound">
-    <div class="container notfound-inner reveal">
-      <p class="notfound-code" aria-hidden="true">404</p>
-      <h1>Page not found</h1>
-      <p>The page you're looking for doesn't exist or may have moved. Let's get you back on track.</p>
-      <div class="btn-row center">
-        <a class="btn btn-primary" href="index.html">Back to Home</a>
-        <a class="btn btn-secondary" href="projects.html">View Projects</a>
+  <main id="main">
+
+    <!-- ===================== PAGE HEADER ===================== -->
+    <section class="page-hero">
+      <div class="container reveal">
+        <p class="eyebrow">About</p>
+        <h1>About Me</h1>
+        <p class="page-sub">My background, education, and the milestones that got me here.</p>
       </div>
-    </div>
+    </section>
+
+    <!-- ===================== BIO + QUICK FACTS ===================== -->
+    <section class="section section-tight" aria-labelledby="bio-heading">
+      <div class="container bio-grid">
+        <div class="bio-text reveal">
+          <h2 id="bio-heading">Who I Am</h2>
+          <p>I'm a Computer Science and Business Administration student at Northeastern University who likes building things that work in the real world, from machine learning models to a Lego-armored robot car. I chose to combine the two because I'm interested in how technology turns data into decisions, and I've seen that firsthand building Power BI dashboards and traffic data analyses as an IT intern at the Arkansas Department of Transportation.</p>
+          <p>Before that, I built a parking-space image classifier in Python and TensorFlow at the University of Arkansas at Little Rock, and in my own time I engineered a joystick-controlled turret for a Raspberry Pi robot with no tutorial to follow. Next, I want to keep growing at the intersection of software, data, and business, and I'm always up for a hard problem I haven't solved before.</p>
+        </div>
+
+        <aside class="card facts-card reveal" aria-label="Quick facts">
+          <dl class="facts">
+            <div>
+              <dt>School</dt>
+              <dd>Northeastern University</dd>
+            </div>
+            <div>
+              <dt>Studying</dt>
+              <dd>Computer Science + Business</dd>
+            </div>
+            <div>
+              <dt>Languages</dt>
+              <dd>English (native), Korean (intermediate)</dd>
+            </div>
+            <div>
+              <dt>Based in</dt>
+              <dd>Boston, MA &amp; Little Rock, AR</dd>
+            </div>
+            <div>
+              <dt>Interests</dt>
+              <dd>Robotics, tennis, viola &amp; animation</dd>
+            </div>
+          </dl>
+          <!-- Add your resume as assets/resume.pdf and this button will work -->
+          <a class="btn btn-primary" href="assets/resume.pdf" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+            Download Resume
+          </a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section class="section section-alt" aria-labelledby="edu-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Education</p>
+          <h2 id="edu-heading">Where I'm Learning</h2>
+        </div>
+
+        <article class="card edu-card reveal">
+          <span class="goal-icon" aria-hidden="true">🎓</span>
+          <div>
+            <h3>Northeastern University</h3>
+            <p class="edu-degree">B.S., Computer Science and Business Administration</p>
+            <p class="edu-meta">Boston, MA · Sep 2024 – Expected May 2029 · Dean's List</p>
+            <p class="edu-detail"><strong>Relevant coursework:</strong> Discrete Structures, Program Design and Implementation II, Fundamentals of Computer Science I &amp; II, Human-Computer Interaction, Information Systems and Digital Technologies, Business Statistics, Financial Accounting &amp; Reporting</p>
+            <p class="edu-detail"><strong>Clubs:</strong> Northeastern Entrepreneur Club, AI Club</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== TIMELINE OF ACCOMPLISHMENTS =====================
+         Newest at the top. To add one, copy a whole <li> ... </li> block. -->
+    <section class="section" aria-labelledby="timeline-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Milestones</p>
+          <h2 id="timeline-heading">Past Accomplishments</h2>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="card timeline-content">
+              <p class="timeline-date">Jun 2026 – Present</p>
+              <h3>IT Intern, Arkansas Department of Transportation (ARDOT)</h3>
+              <p>Analyzed 3M+ traffic records from 3,000+ counting stations to project next-year Average Daily Traffic, and built Power BI reports (with DAX) for permit tracking, warrant audits, and IT project dashboards used across ARDOT districts.</p>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="card timeline-content">
+              <p class="timeline-date">Apr 2026 – Present</p>
+              <h3>PiCar-X Lego Turret Robot</h3>
+              <p>Engineered a joystick-controlled servo turret and Lego missile launcher on a Raspberry Pi 5 robot car with no existing documentation, then published the code, wiring diagrams, and a demo video on GitHub and YouTube.</p>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="card timeline-content">
+              <p class="timeline-date">Jan 2026 – May 2026</p>
+              <h3>Club Hopper: Mobile UX Design</h3>
+              <p>Designed a Figma prototype for a mobile app that helps students discover and compare campus clubs, iterating on usability heuristics and peer testing for Northeastern's Human-Computer Interaction course.</p>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="card timeline-content">
+              <p class="timeline-date">Jun 2025 – Aug 2025</p>
+              <h3>Python Developer, University of Arkansas at Little Rock</h3>
+              <p>Built a parking-space image classifier using HOG features with an SVM, then trained a Keras/TensorFlow CNN on 25,000 images that reached 95% validation accuracy.</p>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="card timeline-content">
+              <p class="timeline-date">Sep 2024 – Present</p>
+              <h3>Dean's List, Northeastern University</h3>
+              <p>Started a B.S. in Computer Science and Business Administration and earned Dean's List recognition.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS BY CATEGORY ===================== -->
+    <section class="section section-alt" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Skills</p>
+          <h2 id="skills-heading">What I Work With</h2>
+        </div>
+
+        <div class="card-grid skills-grid">
+          <article class="card card-hover skill-card reveal">
+            <h3><span aria-hidden="true">💻</span> Languages</h3>
+            <ul class="chip-list">
+              <li class="chip">Java</li>
+              <li class="chip">Python</li>
+              <li class="chip">C++</li>
+              <li class="chip">Kotlin</li>
+              <li class="chip">JavaScript</li>
+              <li class="chip">HTML</li>
+              <li class="chip">Swift (iOS)</li>
+            </ul>
+          </article>
+
+          <article class="card card-hover skill-card reveal">
+            <h3><span aria-hidden="true">🎨</span> Design</h3>
+            <ul class="chip-list">
+              <li class="chip">Figma</li>
+              <li class="chip">Photoshop</li>
+              <li class="chip">Premiere Pro</li>
+            </ul>
+          </article>
+
+          <article class="card card-hover skill-card reveal">
+            <h3><span aria-hidden="true">🎮</span> Game Dev</h3>
+            <ul class="chip-list">
+              <li class="chip">Unity 3D</li>
+            </ul>
+          </article>
+
+          <article class="card card-hover skill-card reveal">
+            <h3><span aria-hidden="true">🧠</span> Machine Learning</h3>
+            <ul class="chip-list">
+              <li class="chip">TensorFlow</li>
+              <li class="chip">Keras</li>
+              <li class="chip">Python</li>
+            </ul>
+          </article>
+
+          <article class="card card-hover skill-card reveal">
+            <h3><span aria-hidden="true">🛠️</span> Dev Tools</h3>
+            <ul class="chip-list">
+              <li class="chip">GitHub</li>
+              <li class="chip">Visual Studio Code</li>
+            </ul>
+          </article>
+
+          <article class="card card-hover skill-card reveal">
+            <h3><span aria-hidden="true">📊</span> Data &amp; Cloud</h3>
+            <ul class="chip-list">
+              <li class="chip">Power BI (DAX)</li>
+              <li class="chip">Microsoft Azure</li>
+              <li class="chip">Excel</li>
+              <li class="chip">Microsoft 365</li>
+            </ul>
+          </article>
+
+          <article class="card card-hover skill-card reveal">
+            <h3><span aria-hidden="true">🤖</span> Hardware</h3>
+            <ul class="chip-list">
+              <li class="chip">Raspberry Pi 5</li>
+              <li class="chip">Embedded Systems</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- ===================== FOOTER ===================== -->
@@ -94,13 +281,13 @@
           </a>
         </li>
         <li>
-          <a href="[[LINKEDIN URL]]" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/ryankim1104/" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
             LinkedIn<span class="sr-only"> (opens in a new tab)</span>
           </a>
         </li>
         <li>
-          <a href="mailto:[[EMAIL ADDRESS]]">
+          <a href="mailto:kim.ryan10@northeastern.edu">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
             Email
           </a>
