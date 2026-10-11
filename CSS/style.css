@@ -809,6 +809,7 @@ a:hover { color: var(--color-accent-hover); }
   font-weight: 500;
 }
 .facts-card .btn { width: 100%; }
+.facts:last-child { margin-bottom: 0; }
 
 /* Education */
 .edu-card {
