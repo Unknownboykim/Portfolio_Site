@@ -895,6 +895,46 @@ a:hover { color: var(--color-accent-hover); }
 .club-card h3 { margin-bottom: 0.15rem; font-size: 1rem; }
 .club-card p { font-size: 0.875rem; color: var(--color-text-muted); }
 
+/* References */
+.ref-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-5);
+  max-width: 640px;
+}
+.ref-avatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-weight: 800;
+  font-size: 1.125rem;
+}
+.ref-body h3 { margin-bottom: var(--space-1); font-size: 1.25rem; }
+.ref-title { margin-bottom: 0.15rem; font-weight: 600; color: var(--color-accent); }
+.ref-org { margin-bottom: var(--space-4); font-size: 0.9375rem; color: var(--color-text-muted); }
+.ref-contact {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ref-contact li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9375rem;
+}
+.ref-contact svg { width: 18px; height: 18px; flex-shrink: 0; color: var(--color-text-muted); }
+.ref-contact a { font-weight: 600; overflow-wrap: anywhere; }
+.ref-label { font-size: 0.8125rem; color: var(--color-text-muted); }
+@media (max-width: 640px) { .ref-card { flex-direction: column; } }
+
 /* Skills */
 .skills-grid { grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); }
 .skill-card h3 {
